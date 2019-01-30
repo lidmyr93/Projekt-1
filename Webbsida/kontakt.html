@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kontakt</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
@@ -62,13 +63,13 @@
                     <a href="kontakt.html">Kontakt</a>
                     <ul class="menu-under">
                         <li>
-                            <a href="kontakt.html#formular">Kontaktformulär</a>
-                        </li>
-                        <li>
                             <a href="kontakt.html#hitta">Hitta till oss</a>
                         </li>
                         <li>
                             <a href="kontakt.html#karta">Karta</a>
+                        </li>
+                        <li>
+                        <a href="kontakt.html#formular">Kontaktformulär</a>
                         </li>
                     </ul>
                 </li>
@@ -79,8 +80,39 @@
     <!-- main text and information div -->
     <div class="main">
         <div class="sectionBlank"></div>
-        <div class="sectionWhite"></div>
-        <div class="sectionGray"></div>
+        <div class="sectionWhite">
+            <!-- Google map -->
+            <div class="map" id="karta">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4068.266357317713!2d18.024963435718462!3d59.34742469350729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82fc0f30ed84f9ed!2sNackademin+AB!5e0!3m2!1ssv!2sse!4v1548843796174" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <!-- Contact info -->
+            <div class="" id="hitta">
+                <p>
+                    Solnavägen 3A
+                    171 65 Solna
+                    Stockholm, Sverige
+
+                    codemail@code.se
+                    070 - xxx xx xx
+                </p>
+            </div>
+        </div>
+        <div class="sectionGrey">
+            <!-- Contact Form -->
+            <div class="" id="formular">
+                <form action="">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name...">
+
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="Your e-mail...">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Write Something..."></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
     </div> <!-- End of main -->
     <footer>
         <hr>
