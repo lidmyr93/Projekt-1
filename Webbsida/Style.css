@@ -1,0 +1,10 @@
+.sectionGrey{
+    background-color: grey;
+}
+.sectionWhite{
+    background-color: blue;
+}
+.sectionBlank{
+    background-color: black;
+    color: white;   
+}
