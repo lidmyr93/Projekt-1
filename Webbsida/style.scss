@@ -1,0 +1,61 @@
+// Variables
+$menu-text: #bbddff;
+$menu-under-text: #000;
+$menu-bg: #eee;
+$menu-border: #ccc;
+$menu-shadow: #000;
+
+/* Main */
+* {
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+@media(min-width: 1024px) {
+    /* Meny */
+    nav {
+        font-size: 1.2em;
+        padding: 0 100px 0 10px;
+        > ul { list-style-type: none; }
+        .menu-item {
+            display: inline-block;
+            padding: 0;
+            a { 
+                font-weight: bold;
+                text-decoration: none;
+                color: $menu-under-text;
+            }
+            > a {
+                display: block;
+                padding: 10px 20px 10px 20px;
+                color: $menu-text;
+                text-shadow: 0 1px 0 $menu-shadow;
+            }
+            .menu-under {
+                position: absolute;
+                list-style-type: none;
+                border: 1px solid $menu-border;
+                background-color: $menu-bg;
+                box-shadow: 1px 1px 1px $menu-shadow;
+                opacity: 0.97;
+                padding: 10px;
+                border-radius: 0px 3px 3px 3px;
+                margin: 0 0 0 20px;
+                transition: 0.1s ease-in-out;
+                transform: scale(0);
+                transform-origin: top left;
+                > li { margin: 10px; }
+                a:hover { 
+                    border-bottom: 5px solid $menu-text; 
+                    transition: 0.3s ease-in-out;
+                }     
+            }
+            a:hover + .menu-under, .menu-under:hover { 
+                display: initial; 
+                transition: 0.3s ease-in-out;
+                transform: scale(1);
+            }
+        }
+        /* Meny END */
+    }
+}
