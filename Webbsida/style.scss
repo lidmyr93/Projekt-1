@@ -31,12 +31,51 @@ $menu-shadow: #000;
 /* temp end */
 
 /* Main END */
+ /* Footer */
+ .mobilehide{
+     display: none;
+ }
+ .mobileshow{
+     display: block;
+ }
+ footer{
+     display: grid;
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto;
+ }
+ 
+.mobileOne{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1;
+    text-align: center;
+    
+}
+.mobileTwo{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 1;
+    text-align: center;
+}
+.mobileThree{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row: 1;
+    text-align: center;
+}
 
+/* Footer ends */
 
 /* --- DESKTOP --- */
 
 @media(min-width: 1024px) {
     /* Meny */
+    .desktophide{
+        display: none;
+    }
+    .desktopshow{
+        display: block;
+    }
     nav {
         font-size: 1.2em;
         padding: 0 100px 0 10px;
@@ -82,4 +121,55 @@ $menu-shadow: #000;
         }
         /* Meny END */
     }
+    /* footer start */
+    hr{
+        border: 2px solid #ECECEC;
+        width: 95%;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .grid-kontakt{
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+    .grid-cookies{
+        grid-column: 1;
+        grid-row: 2;
+        text-align: left;
+    }
+    .grid-info{
+        grid-column: 2;
+        grid-row: 4;
+        text-align: center;
+    }
+    .grid-fb{
+        grid-column: 3;
+        grid-row: 1;
+        margin: 10px;
+        text-align: right;
+    }
+    .grid-ig{
+        grid-column: 3;
+        grid-row: 2;
+        margin: 10px;
+        text-align: right;
+    }
+    .grid-li{
+        grid-column:3;
+        grid-row: 3;
+        margin: 10px;
+        text-align: right;
+    }
+    .footer-logos{
+        height: 25px;
+        width: 25px;
+    }
+  
+    /* footer ends */
 }
