@@ -1,9 +1,14 @@
 // Variables
-$menu-text: #bbddff;
-$menu-under-text: #000;
-$menu-bg: #eee;
-$menu-border: #ccc;
-$menu-shadow: #000;
+$header-bg: #355C7D;
+
+$mobile-menu-text: #000;
+$mobile-menu-bg: #bbddff;
+
+$desktop-menu-text: #bbddff;
+$desktop-menu-under-text: #000;
+$desktop-menu-bg: #eee;
+$desktop-menu-border: #ccc;
+$desktop-menu-shadow: #000;
 
 /* General */
 * {
@@ -11,10 +16,80 @@ $menu-shadow: #000;
     font-family: Lato;
 }
 
+body {
+    margin: 0;
+}
 
 /* Header */
+header {
+    position: fixed;
+    padding: 10px;
+    background-color: $header-bg;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    height: 5em;
+}
+
+
+/* Meny */
+@media(max-width: 1024px) {
+    .hamburger {
+        display: block;
+        padding: 10px 20px;
+        float: right;
+        font-size: 3em;
+        text-decoration: none;
+        color: #000;
+    }
+
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 30px;
+        margin: 0;
+        top: 6.45em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        background-color: $mobile-menu-bg; 
+        a {
+            color: $mobile-menu-text;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        > ul { text-align: right; }
+        > ul, .menu-under { list-style-type: none; }
+        .menu-under {
+            padding-left: 10px;
+            padding-bottom: 10px;
+            a { 
+                font-weight: normal; 
+                font-size: 1em;
+            }
+        }
+        li>a { padding-bottom: 10px; }
+    }
+    .show-nav { 
+        display: block; 
+        transition: 0.5s ease-in-out;
+        max-height: 100%;
+    }
+}
 
 /* Main */
+main {
+    margin-top: 6.45em;
+}
 
 /* temp placeholderBild */
 /* .sectionGrey{
@@ -37,7 +112,9 @@ $menu-shadow: #000;
 
 @media(min-width: 1024px) {
     /* Meny */
+    .hamburger { display: none; }
     nav {
+        display: initial;
         font-size: 1.2em;
         padding: 0 100px 0 10px;
         > ul { list-style-type: none; }
@@ -47,20 +124,20 @@ $menu-shadow: #000;
             a { 
                 font-weight: bold;
                 text-decoration: none;
-                color: $menu-under-text;
+                color: $desktop-menu-under-text;
             }
             > a {
                 display: block;
                 padding: 10px 20px 10px 20px;
-                color: $menu-text;
-                text-shadow: 0 1px 0 $menu-shadow;
+                color: $desktop-menu-text;
+                text-shadow: 0 1px 0 $desktop-menu-shadow;
             }
             .menu-under {
                 position: absolute;
                 list-style-type: none;
-                border: 1px solid $menu-border;
-                background-color: $menu-bg;
-                box-shadow: 1px 1px 1px $menu-shadow;
+                border: 1px solid $desktop-menu-border;
+                background-color: $desktop-menu-bg;
+                box-shadow: 1px 1px 1px $desktop-menu-shadow;
                 opacity: 0.97;
                 padding: 10px;
                 border-radius: 0px 3px 3px 3px;
@@ -70,7 +147,7 @@ $menu-shadow: #000;
                 transform-origin: top left;
                 > li { margin: 10px; }
                 a:hover { 
-                    border-bottom: 5px solid $menu-text; 
+                    border-bottom: 5px solid $desktop-menu-text; 
                     transition: 0.3s ease-in-out;
                 }     
             }
