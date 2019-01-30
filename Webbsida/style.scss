@@ -92,13 +92,13 @@ main {
 }
 
 /* temp placeholderBild */
-.sectionGrey{
+/* .sectionGrey{
     background-color: grey;
 }
 .sectionBlank{
     background-color: black;
     color: white;   
-}
+} */
 .placeholderBild{
     width: 200px;
     height: 200px;
@@ -160,3 +160,66 @@ main {
         /* Meny END */
     }
 }
+
+
+/* mobil main */
+
+main{
+    display: grid;
+    grid-template-columns: auto auto ;
+    .sectionBlank, .sectionWhite, .sectionGrey{
+        grid-column: 1 / 3;
+    }
+    .sectionBlank{
+        background-color: #000;
+        color: #eee;
+        height: 150px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        .blank-spacer{
+            grid-column: 1 / 6;
+        }
+        .blank-first-statement{
+            grid-column: 2 / 4;
+
+        }
+        
+        .blank-second-statement{
+            grid-column: 3 / 5;
+        }
+    }
+    .sectionWhite{
+        background-color: #ffff;
+        color: #5E5555
+
+    }
+    .sectionGrey{
+        background-color: #E6E6E6;
+        color: #5E5555
+    }
+    .textbox-title{
+        font-size: 20px;
+        grid-column: 1 / 3;
+        h2{
+            text-align: center;
+        }
+
+    }
+    .textbox-picture{
+        grid-column: 1 / 3;
+    }
+    .textbox-picture-picture{
+        max-width: 100%;
+        padding: 0% 5% 0% 5%;
+    }
+    .textbox-text{
+        padding: 0% 2% 0% 2%;
+        p{
+            text-align: center;
+        }
+
+    }
+}
+
+
+
