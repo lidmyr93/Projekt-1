@@ -1,3 +1,4 @@
+/* Header */
 /* Main */
 * {
   -webkit-box-sizing: border-box;
@@ -5,6 +6,24 @@
   font-family: Lato;
 }
 
+/* temp placeholderBild */
+.sectionGrey {
+  background-color: grey;
+}
+
+.sectionBlank {
+  background-color: black;
+  color: white;
+}
+
+.placeholderBild {
+  width: 200px;
+  height: 200px;
+}
+
+/* temp end */
+/* Main END */
+/* --- DESKTOP --- */
 @media (min-width: 1024px) {
   /* Meny */
   nav {
