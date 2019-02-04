@@ -27,8 +27,13 @@ switchers.forEach(switcher => {
     switcher.addEventListener('mouseout', showArrows);
 });
 
-function switchImage(e) {
-
+function switchImage() {
+    const switcher = this.parentElement.children[1];
+    const offset =  switcher.offsetWidth;
+    console.log(switcher.offsetLeft);
+    (this.classList.contains('switcher-right'))
+        ? switcher.scrollLeft += offset
+        : switcher.scrollLeft -= offset;
 }
 
 function showArrows() {
