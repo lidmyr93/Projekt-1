@@ -31,43 +31,6 @@ header {
 .logo {
     height: 5em;
 }
-/* Mobile Footer */
-.hidemobile{
-    display: none;
-}
-    
-    hr{
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-       }
-footer{
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    text-align: center;
-    a{
-        text-decoration: none;
-        color: #000;
-    }
-}
-.f-g-contact{
-    grid-column: 1;
-    grid-row:1;
-}
-.f-g-cookies{
-    grid-column: 2;
-    grid-row:1;
-}
-.f-g-social{
-    grid-column: 3;
-    grid-row:1;
-}
-
-/* Mobile Footer ends */
-
 
 /* Meny */
 @media(max-width: 1024px) {
@@ -118,32 +81,100 @@ footer{
         max-height: 100%;
     }
 }
+/* Meny end */
+/* Header end */
 
-/* Main */
-main {
-    margin-top: 6.45em;
+/* main */
+main{
+    margin-top: 6.45em; // Margin för att inte header ska täcka innehållet
+    .sectionBlank{
+        background-color: #000;
+        color: #eee;
+        height: 150px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        .blank-spacer{
+            grid-column: 1 / 6;
+        }
+        .blank-first-statement{
+            grid-column: 2 / 4;
+
+        }       
+        .blank-second-statement{
+            grid-column: 3 / 5;
+        }
+    }
+    // Section grid
+    .sectionGrey, .sectionWhite {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        color: #5E5555;
+    }
+    .sectionWhite{ background-color: #ffffff; }
+    .sectionGrey{ background-color: #E6E6E6; }
+    * > *  { grid-column: auto / span 6; }
+    // Section grid end
+    .textbox-title{
+        h2{
+            text-align: center;
+        }
+    }
+    .textbox-picture-picture{
+        max-width: 100%;
+        padding: 0% 5% 0% 5%;
+    }
+    .textbox-text{
+        padding: 0% 2% 0% 2%;
+        p{
+            text-align: center;
+        }
+
+    }
+}
+/* main end *
+
+/* Mobile Footer */
+.hidemobile{
+    display: none;
+}
+    
+    hr{
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+       }
+footer{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+.f-g-contact{
+    grid-column: 1;
+    grid-row:1;
+}
+.f-g-cookies{
+    grid-column: 2;
+    grid-row:1;
+}
+.f-g-social{
+    grid-column: 3;
+    grid-row:1;
 }
 
-/* temp placeholderBild */
-/* .sectionGrey{
-    background-color: grey;
-}
-.sectionBlank{
-    background-color: black;
-    color: white;   
-} */
-.placeholderBild{
-    width: 200px;
-    height: 200px;
-}
-/* temp end */
-
-/* Main END */
+/* Mobile Footer ends */
 
 
 /* --- DESKTOP --- */
 
 @media(min-width: 1024px) {
+    /* Header */
     /* Meny */
     .hamburger { display: none; }
     nav {
@@ -190,6 +221,20 @@ main {
         }
     }
     /* Meny END */
+    /* Header END */
+
+    /* Main */
+    .sectionGrey, .sectionWhite {
+        // grid
+        * > * { grid-column: auto / span 6; }
+        .textbox-two { grid-column: auto / span 2; }
+        .textbox-three { grid-column: auto / span 3; }
+        .textbox-four { grid-column: auto / span 4; }
+    }    
+    
+
+    /* Main END */
+
     /* Desktop Footer */
     .showdesktop{
         display: block;
@@ -254,64 +299,7 @@ main {
 } /* Media querry end */
 
 
-/* mobil main */
 
-main{
-    display: grid;
-    grid-template-columns: auto auto ;
-    .sectionBlank, .sectionWhite, .sectionGrey{
-        grid-column: 1 / 3;
-    }
-    .sectionBlank{
-        background-color: #000;
-        color: #eee;
-        height: 150px;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        .blank-spacer{
-            grid-column: 1 / 6;
-        }
-        .blank-first-statement{
-            grid-column: 2 / 4;
-
-        }
-        
-        .blank-second-statement{
-            grid-column: 3 / 5;
-        }
-    }
-    .sectionWhite{
-        background-color: #ffff;
-        color: #5E5555
-
-    }
-    .sectionGrey{
-        background-color: #E6E6E6;
-        color: #5E5555
-    }
-    .textbox-title{
-        font-size: 20px;
-        grid-column: 1 / 3;
-        h2{
-            text-align: center;
-        }
-
-    }
-    .textbox-picture{
-        grid-column: 1 / 3;
-    }
-    .textbox-picture-picture{
-        max-width: 100%;
-        padding: 0% 5% 0% 5%;
-    }
-    .textbox-text{
-        padding: 0% 2% 0% 2%;
-        p{
-            text-align: center;
-        }
-
-    }
-}
 
     
     
