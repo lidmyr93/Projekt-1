@@ -128,9 +128,70 @@ main{
         p{
             text-align: center;
         }
-
     }
 }
+
+/* Portfolio */
+#kodexempel,#designexempel {
+    * > img { padding: 20px 0; }
+    * > h2,p { padding: 0 20px; }
+}
+
+/* Image switcher */
+.switcher {
+    display: flex;
+    align-items: center;          
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.switcher-imgs {
+    display: flex;
+    max-width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.switcher-img {
+    margin: auto 0;
+    width: 100%;
+    height: 100%;
+}
+
+.switcher-left,
+.switcher-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    font-size: 2em;
+    padding-bottom: 0.2em;
+    opacity: 0.75;
+    transition: 0.5s ease-in-out;
+}
+.switcher-left {
+    margin-left: -50px;
+    left: 0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+.switcher-right {
+    margin-right: -50px;
+    right: 0;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+.switcher-active-left { left: 50px; }
+.switcher-active-right { right: 50px; }
+/* Image switcher end*/
+
+/* Portfolio - end */
+
 /* main end *
 
 /* Mobile Footer */
@@ -232,6 +293,11 @@ footer{
         .textbox-four { grid-column: auto / span 4; }
     }    
     
+    /* Portfolio */
+    #kodexempel {
+        >*:first-child { order: 1; }
+    }
+    /* Portfolio end */
 
     /* Main END */
 
