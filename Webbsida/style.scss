@@ -45,7 +45,7 @@ header {
 footer{
     margin-bottom: 10px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     text-align: center;
     a{
@@ -56,16 +56,26 @@ footer{
 .f-g-contact{
     grid-column: 1;
     grid-row:1;
+    text-align: left;
+    margin-left: 5px;
 }
 .f-g-cookies{
     grid-column: 2;
     grid-row:1;
+    text-align: center;
 }
 .f-g-social{
     grid-column: 3;
     grid-row:1;
+    text-align: right;
 }
-
+.f-logo{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
 /* Mobile Footer ends */
 
 
@@ -197,16 +207,12 @@ main {
     .hidedesktop{
         display: none;
     }
-    .f-logo{
-        width: 25px;
-        height: 25px;
-        border-radius: 100%;
-        vertical-align: middle;
-        margin-right: 5px;
-    }
+   
     footer{
-        grid-template-columns: 2fr 1fr 1fr 2fr;
+        grid-template-columns: 1fr 3fr 3fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        margin: 25px 25px 10px 25px;
+        font-size: 1.3em;
         a:hover{
             zoom: 103%;
         }
@@ -214,42 +220,53 @@ main {
     .f-g-contact{
         grid-column: 1;
         grid-row: 1;
+        text-align: left;
+        margin-left: 0px;
         
     }
     .f-g-cookies{
         grid-column: 1;
         grid-row: 2;
+        text-align: left;
     }
     .f-g-mail{
         grid-column: 2;
         grid-row: 3;
+        text-align: right;
+        padding-right: 50px;
     }
     .f-g-numb{
         grid-column: 3;
         grid-row: 3;
+        text-align: left;
+        padding-left: 50px;
     }
     .f-g-fb{
         grid-column: 4;
         grid-row: 1;
+        text-align: left;
+        position: relative;
+        left: 110px;
+        
     }
     .f-g-ig{
         grid-column: 4;
         grid-row: 2;
+        text-align: left;
+        position: relative;
+        left: 110px;
+        
     }
     .f-g-li{
         grid-column: 4;
         grid-row: 3;
-    }
-    .f-style-left{
         text-align: left;
-        padding-left: 15px;
+        position: relative;
+        left: 110px;
+        
     }
-    .f-style-right{
-        text-align: right;
-        padding-right: 15px;
-    }
-
     /* Desktop footer ends */
+
 } /* Media querry end */
 
 
