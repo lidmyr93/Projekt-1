@@ -168,7 +168,7 @@ main {
                 position: absolute;
                 list-style-type: none;
                 background-color: $menu-bg;
-                box-shadow: 2px 2px 5px $desktop-menu-shadow;
+                box-shadow: 2px 2px 5px $menu-shadow;
                 opacity: 0.9;
                 padding: 10px;
                 border-radius: 0px 3px 3px 3px;
@@ -188,8 +188,8 @@ main {
                 transform: scale(1);
             }
         }
-        /* Meny END */
     }
+    /* Meny END */
     /* Desktop Footer */
     .showdesktop{
         display: block;

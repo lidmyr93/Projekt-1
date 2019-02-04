@@ -168,7 +168,6 @@ main {
     display: initial;
     font-size: 1.2em;
     padding: 0 100px 0 10px;
-    /* Meny END */
   }
   nav > ul {
     list-style-type: none;
@@ -219,6 +218,7 @@ main {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+  /* Meny END */
   /* Desktop Footer */
   .showdesktop {
     display: block;
