@@ -1,16 +1,12 @@
 // Variables
 $header-bg: #355C7D;
 
-$mobile-menu-text: #000;
-$mobile-menu-bg: #bbddff;
+$menu-text: #000;
+$menu-bg: #bbddff;
+$menu-shadow: #000;
+$menu-line: #55aaff;
 
-$desktop-menu-text: #bbddff;
-$desktop-menu-under-text: #000;
-$desktop-menu-bg: #eee;
-$desktop-menu-border: #ccc;
-$desktop-menu-shadow: #000;
-
-/* General */
+/* -- MOBILE / GENERAL */
 * {
     box-sizing: border-box;
     font-family: Lato;
@@ -78,26 +74,28 @@ footer{
     .hamburger {
         display: block;
         padding: 10px 20px;
+        padding: 0.1em;
         float: right;
         font-size: 3em;
         text-decoration: none;
-        color: #000;
+        color: $menu-text;
+        cursor: pointer;
     }
 
     nav {
         width: 100%;
         max-height: 0;
-        overflow: hidden;
-        padding: 0 30px;
+        overflow: scroll;
+        padding: 0 30px 0 10px;
         margin: 0;
         top: 6.45em;
         left: 0;
         right: 0;
         bottom: 0;
         position: fixed;
-        background-color: $mobile-menu-bg; 
+        background-color: $menu-bg; 
         a {
-            color: $mobile-menu-text;
+            color: $menu-text;
             font-size: 1.2em;
             text-decoration: none;
             display: inline-block;
@@ -116,7 +114,6 @@ footer{
         li>a { padding-bottom: 10px; }
     }
     .show-nav { 
-        display: block; 
         transition: 0.5s ease-in-out;
         max-height: 100%;
     }
@@ -160,21 +157,19 @@ main {
             a { 
                 font-weight: bold;
                 text-decoration: none;
-                color: $desktop-menu-under-text;
+                color: $menu-text;
             }
             > a {
                 display: block;
                 padding: 10px 20px 10px 20px;
-                color: $desktop-menu-text;
-                text-shadow: 0 1px 0 $desktop-menu-shadow;
+                color: $menu-text;
             }
             .menu-under {
                 position: absolute;
                 list-style-type: none;
-                border: 1px solid $desktop-menu-border;
-                background-color: $desktop-menu-bg;
-                box-shadow: 1px 1px 1px $desktop-menu-shadow;
-                opacity: 0.97;
+                background-color: $menu-bg;
+                box-shadow: 2px 2px 5px $menu-shadow;
+                opacity: 0.9;
                 padding: 10px;
                 border-radius: 0px 3px 3px 3px;
                 margin: 0 0 0 20px;
@@ -183,7 +178,7 @@ main {
                 transform-origin: top left;
                 > li { margin: 10px; }
                 a:hover { 
-                    border-bottom: 5px solid $desktop-menu-text; 
+                    border-bottom: 5px solid $menu-line; 
                     transition: 0.3s ease-in-out;
                 }     
             }
@@ -193,8 +188,8 @@ main {
                 transform: scale(1);
             }
         }
-        /* Meny END */
     }
+    /* Meny END */
     /* Desktop Footer */
     .showdesktop{
         display: block;
