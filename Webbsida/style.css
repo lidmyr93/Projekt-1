@@ -161,12 +161,26 @@ main .textbox-text p {
 }
 
 /* Portfolio */
+#kodexempel, #designexempel {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
 #kodexempel * > img, #designexempel * > img {
   padding: 20px 0;
 }
 
 #kodexempel * > h2, #kodexempel p, #designexempel * > h2, #designexempel p {
   padding: 0 20px;
+}
+
+#kodexempel * > ul, #designexempel * > ul {
+  padding: 0 20px 20px 50px;
+}
+
+#kodexempel * > ul li, #designexempel * > ul li {
+  padding: 10px 0;
 }
 
 /* Image switcher */
@@ -181,23 +195,41 @@ main .textbox-text p {
   overflow: hidden;
 }
 
-.switcher-imgs {
+.switcher, .switcher .switcher-imgs {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.switcher .switcher-imgs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%;
-  min-width: 100%;
-  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.switcher-img {
+.switcher .switcher-imgs .switcher-img {
   margin: auto 0;
-  width: 100%;
+  width: 0;
   height: 100%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.switcher-left,
-.switcher-right {
+.switcher .switcher-imgs .switcher-active {
+  width: 100%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+}
+
+.switcher .switcher-left, .switcher .switcher-right {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,27 +250,28 @@ main .textbox-text p {
   opacity: 0.75;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  z-index: 1;
 }
 
-.switcher-left {
+.switcher .switcher-left {
   margin-left: -50px;
   left: 0;
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;
 }
 
-.switcher-right {
+.switcher .switcher-right {
   margin-right: -50px;
   right: 0;
   border-top-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
 
-.switcher-active-left {
+.switcher .switcher-active-left {
   left: 50px;
 }
 
-.switcher-active-right {
+.switcher .switcher-active-right {
   right: 50px;
 }
 
