@@ -149,7 +149,7 @@ main .textbox-title h2 {
 
 main .textbox-picture-picture {
   max-width: 100%;
-  padding: 0% 5% 0% 5%;
+  padding: 0px 30px 30px 30px;
 }
 
 main .textbox-text {
@@ -159,6 +159,61 @@ main .textbox-text {
 main .textbox-text p {
   text-align: center;
 }
+
+/* Contact */
+textarea {
+  height: 185px;
+}
+
+iframe {
+  border: none;
+  height: 500px;
+  width: 100%;
+}
+
+input[type=submit] {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 5px;
+  margin: 4px auto;
+  border: 0;
+  background-color: black;
+  color: #FFF;
+  border-radius: 4px;
+  font-size: 15px;
+  outline: none;
+}
+
+input[type=text], textarea {
+  font-size: 15px;
+  margin: 10px 0;
+  border: 0;
+  resize: none;
+  padding: 10px 5px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  max-width: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  outline: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  border: 2px solid #7a817f;
+}
+
+.contact-pic {
+  display: none;
+}
+
+.adress {
+  display: inline-block;
+  padding-left: 30px;
+  font-size: 1.5em;
+}
+
+/* Contact END */
 
 /* Portfolio */
 #kodexempel, #designexempel {
@@ -416,6 +471,34 @@ footer a {
   .sectionGrey .textbox-four, .sectionWhite .textbox-four {
     grid-column: auto / span 4;
   }
+
+  /* Contact */
+  .contact-pic {
+    display: -ms-grid;
+    display: grid;
+  }
+  .contact-pic img {
+    max-width: 100%;
+    padding-right: 30px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .adress {
+    display: inline-block;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 1.5em;
+  }
+  /* Contact END */
+
   /* Portfolio */
   #kodexempel > *:first-child {
     -webkit-box-ordinal-group: 2;
@@ -423,6 +506,7 @@ footer a {
             order: 1;
   }
   /* Portfolio end */
+
   /* Main END */
   /* Desktop Footer */
   .showdesktop {
