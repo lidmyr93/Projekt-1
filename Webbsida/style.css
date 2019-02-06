@@ -611,12 +611,11 @@ footer a {
 }
 
 .close{
-  size: 20px;
-  font-weight: bold;
+  font-size: 40px;
   float: right;
   color: #000;
 }
-.close:hover{
+.close:hover,{
   color: #000;
   text-decoration: none;
   cursor: pointer;
