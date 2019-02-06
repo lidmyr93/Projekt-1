@@ -109,26 +109,27 @@ main{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         color: #5E5555;
+        padding-bottom: 30px;
     }
     .sectionWhite{ background-color: #ffffff; }
     .sectionGrey{ background-color: #E6E6E6; }
     * > *  { grid-column: auto / span 6; }
     // Section grid end
-    .textbox-title{
-        h2{
-            text-align: center;
-        }
+    h1,h2,p,.textbox-picture-picture { 
+        padding: 30px 30px 0 30px;
+        margin: 0;
     }
+    h1 { font-size: 1.7em; }
+    h2 { font-size: 1.5em; }
     .textbox-picture-picture{
         max-width: 100%;
-        padding: 0px 30px 30px 30px;
     }
-    .textbox-text{
-        padding: 0% 2% 0% 2%;
-        p{
-            text-align: center;
+    ul {
+        padding: 30px 30px 0 50px;
+        margin: 0;
+        li {
+            padding: 10px 0;
         }
-
     }
 }
 
@@ -188,22 +189,14 @@ main{
 
     /* Contact END */
 
-    }
-}
 
 /* Portfolio */
 #kodexempel,#designexempel {
     align-items: start;
-    padding: 30px 30px;
-    * > h2,p { 
-        margin: 0; 
-        padding: 0 30px; }
-    * > ul {
-        padding: 0 20px 20px 50px;
-        li {
-            padding: 10px 0;
-        }
-    }
+    padding: 30px;
+    h1 { padding: 0; }
+    p { padding: 30px 30px 30px 0; }
+    ul { padding-left: 20px; }
 }
 
 /* Image switcher */
@@ -211,7 +204,7 @@ main{
     display: flex;
     align-items: center;       
     margin: 0 auto;
-    overflow: hidden;  
+    overflow: hidden;
     &, .switcher-imgs { 
         max-width: 100%;
         min-width: 100%;
@@ -385,7 +378,10 @@ footer{
     
     /* Portfolio */
     #kodexempel {
-        >*:first-child { order: 1; }
+        >*:first-child { 
+            order: 1; 
+            padding-left: 30px;
+        }
     }
     /* Portfolio end */
 
