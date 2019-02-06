@@ -26,6 +26,7 @@ header {
     align-items: center;
     width: 100%;
     top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -108,56 +109,184 @@ main{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         color: #5E5555;
+        padding-bottom: 30px;
     }
     .sectionWhite{ background-color: #ffffff; }
     .sectionGrey{ background-color: #E6E6E6; }
     * > *  { grid-column: auto / span 6; }
-    // Section grid end
-    .textbox-title{
-        h2{
-            text-align: center;
-        }
-    }
-    .textbox-picture-picture{
-        max-width: 100%;
-        padding: 0% 5% 0% 5%;
-    }
-    .textbox-text{
-        padding: 0% 2% 0% 2%;
-        p{
-            text-align: center;
-        }
-    }
-    /*  .textbox-konsult{
-        padding: 0% 2% 0% 2%;
-            h3{
-                margin-top: 0px;
-            }
-        img{
-            width: 200px;
-            height: 150px;
-        }
-        ol{
-            list-style-type: disc;
-            padding: 0% 2% 0% 2%;
-        }
-    }  */
-    
+  // Section grid end
+  h1,h2,p,.textbox-picture-picture { 
+    padding: 30px 30px 0 30px;
+    margin: 0;
+  }
+  h1 { font-size: 1.7em; }
+  h2 { font-size: 1.5em; }
+  .textbox-picture-picture{
+    max-width: 100%;
+  }
+  /* Om oss Mobile/Generella start */
     figure{
-        margin: 0% 2% 0% 2%;
-        padding: 0px;
+        margin: 0;
+        padding: 15px 30px 30px 30px;
         img{
             width: 200px;
             height: 150px;
+            border: 1px solid black;
         }
         figcaption{
             h3{
                 margin-top: 1px;
-                padding-left: 10px;
             }
+            ol{
+                padding-left: 15px;
+                margin: 5px 0px 5px 0px;
+            }
+            p{padding-left: 0px; padding-top: 10px;}
+
+        }
+    }
+    /* Om oss  Mobile/Generella ends */
+}
+
+/* Contact */
+
+    textarea{
+        height: 185px;
+    }
+
+    iframe{
+        border: none;
+        height: 500px;
+        width: 100%;
+    }       
+    
+    input[type=submit]{
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 5px;
+            margin: 4px auto;
+            border: 0;
+            background-color: black; 
+            color: #FFF;
+            border-radius: 4px;
+            font-size: 15px;
+            outline: none;
+        }
+
+          input[type=text], textarea{
+            font-size: 15px;
+            margin: 10px 0;
+            border: 0;
+            resize: none;
+            padding: 10px 5px;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            max-width: 100%;
+            width: 100%;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            outline: none;
+        }
+
+        input[type=text]:focus, textarea:focus{
+            border: 2px solid #7a817f;
+        }
+
+    .contact-pic{
+     display: none;
+    }
+
+    .adress{
+        display: inline-block;
+        padding-left: 30px;
+        font-size: 1.5em;
+    }
+
+    /* Contact END */
+
+    
+
+
+/* Portfolio */
+#kodexempel,#designexempel {
+    align-items: start;
+    padding: 30px 30px;
+    * > h2,p { 
+        margin: 0; 
+        padding: 0 30px; }
+    * > ul {
+        padding: 0 20px 20px 50px;
+        li {
+            padding: 10px 0;
         }
     }
 }
+
+/* Image switcher */
+.switcher {
+    display: flex;
+    align-items: center;       
+    margin: 0 auto;
+    overflow: hidden;  
+    &, .switcher-imgs { 
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+    }
+    .switcher-imgs {
+        display: flex;
+        align-items: center;
+        .switcher-img {
+            margin: auto 0;
+            width: 0;
+            height: 100%;
+            transform: rotate(360deg);
+            opacity: 0;
+            transition: 1s ease-in-out;
+        }
+        .switcher-active { 
+            width: 100%; 
+            transform: rotate(0deg); 
+            opacity: 1;
+        }
+    }
+    
+    .switcher-left, .switcher-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #000;
+        font-size: 2em;
+        padding-bottom: 0.2em;
+        opacity: 0.75;
+        transition: 0.5s ease-in-out;
+        z-index: 1;
+    }
+    .switcher-left {
+        margin-left: -50px;
+        left: 0;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
+    .switcher-right {
+        margin-right: -50px;
+        right: 0;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+    }
+    .switcher-active-left { left: 50px; }
+    .switcher-active-right { right: 50px; }
+}
+/* Image switcher end*/
+
+/* Portfolio - end */
+
 /* main end *
 
 /* Mobile Footer */
@@ -270,7 +399,35 @@ footer{
         .textbox-four { grid-column: auto / span 4; }
     }    
     
+    /* Portfolio + omoss */
+    #kodexempel, #filosofi {
+        >*:first-child { order: 1; }
+    }
+    /* Portfolio end */
 
+    /* Contact */
+
+    .contact-pic{
+        display: grid;
+        img{
+            max-width: 100%;
+            padding-right: 30px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    .adress{
+        display: inline-block;
+        justify-self: center;
+        align-self: center;
+        padding-left: 30px;
+        padding-top: 40px;
+        font-size: 1.5em;
+    }
+
+    /* Contact END */
+    
     /* Main END */
 
     /* Desktop Footer */
@@ -333,6 +490,26 @@ footer{
     /* Desktop footer ends */
 
 } /* Media querry end */
+
+/* Cookie CSS */
+.cookie{
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.cookie-content{
+    padding: 15px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+}
 
 
 

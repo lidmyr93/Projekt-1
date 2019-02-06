@@ -25,6 +25,7 @@ header {
           align-items: center;
   width: 100%;
   top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -92,20 +93,8 @@ header {
 /* main */
 main {
   margin-top: 6.45em;
-  /*  .textbox-konsult{
-        padding: 0% 2% 0% 2%;
-            h3{
-                margin-top: 0px;
-            }
-        img{
-            width: 200px;
-            height: 150px;
-        }
-        ol{
-            list-style-type: disc;
-            padding: 0% 2% 0% 2%;
-        }
-    }  */
+  /* Om oss Mobile/Generella start */
+  /* Om oss  Mobile/Generella ends */
 }
 
 main .sectionBlank {
@@ -142,6 +131,7 @@ main .sectionGrey, main .sectionWhite {
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   color: #5E5555;
+  padding-bottom: 30px;
 }
 
 main .sectionWhite {
@@ -156,38 +146,217 @@ main * > * {
   grid-column: auto / span 6;
 }
 
-main .textbox-title h2 {
-  text-align: center;
+main h1, main h2, main p, main .textbox-picture-picture {
+  padding: 30px 30px 0 30px;
+  margin: 0;
+}
+
+main h1 {
+  font-size: 1.7em;
+}
+
+main h2 {
+  font-size: 1.5em;
 }
 
 main .textbox-picture-picture {
   max-width: 100%;
-  padding: 0% 5% 0% 5%;
-}
-
-main .textbox-text {
-  padding: 0% 2% 0% 2%;
-}
-
-main .textbox-text p {
-  text-align: center;
 }
 
 main figure {
-  margin: 0% 2% 0% 2%;
-  padding: 0px;
+  margin: 0;
+  padding: 15px 30px 30px 30px;
 }
 
 main figure img {
   width: 200px;
   height: 150px;
+  border: 1px solid black;
 }
 
 main figure figcaption h3 {
   margin-top: 1px;
-  padding-left: 10px;
 }
 
+main figure figcaption ol {
+  padding-left: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+main figure figcaption p {
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+/* Contact */
+textarea {
+  height: 185px;
+}
+
+iframe {
+  border: none;
+  height: 500px;
+  width: 100%;
+}
+
+input[type=submit] {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 5px;
+  margin: 4px auto;
+  border: 0;
+  background-color: black;
+  color: #FFF;
+  border-radius: 4px;
+  font-size: 15px;
+  outline: none;
+}
+
+input[type=text], textarea {
+  font-size: 15px;
+  margin: 10px 0;
+  border: 0;
+  resize: none;
+  padding: 10px 5px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  max-width: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  outline: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  border: 2px solid #7a817f;
+}
+
+.contact-pic {
+  display: none;
+}
+
+.adress {
+  display: inline-block;
+  padding-left: 30px;
+  font-size: 1.5em;
+}
+
+/* Contact END */
+/* Portfolio */
+#kodexempel, #designexempel {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 30px 30px;
+}
+
+#kodexempel * > h2, #kodexempel p, #designexempel * > h2, #designexempel p {
+  margin: 0;
+  padding: 0 30px;
+}
+
+#kodexempel * > ul, #designexempel * > ul {
+  padding: 0 20px 20px 50px;
+}
+
+#kodexempel * > ul li, #designexempel * > ul li {
+  padding: 10px 0;
+}
+
+/* Image switcher */
+.switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.switcher, .switcher .switcher-imgs {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.switcher .switcher-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switcher .switcher-imgs .switcher-img {
+  margin: auto 0;
+  width: 0;
+  height: 100%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.switcher .switcher-imgs .switcher-active {
+  width: 100%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+}
+
+.switcher .switcher-left, .switcher .switcher-right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+  font-size: 2em;
+  padding-bottom: 0.2em;
+  opacity: 0.75;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.switcher .switcher-left {
+  margin-left: -50px;
+  left: 0;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.switcher .switcher-right {
+  margin-right: -50px;
+  right: 0;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.switcher .switcher-active-left {
+  left: 50px;
+}
+
+.switcher .switcher-active-right {
+  right: 50px;
+}
+
+/* Image switcher end*/
+/* Portfolio - end */
 /* main end *
 
 /* Mobile Footer */
@@ -329,6 +498,39 @@ footer a {
   .sectionGrey .textbox-four, .sectionWhite .textbox-four {
     grid-column: auto / span 4;
   }
+  /* Portfolio + omoss */
+  #kodexempel > *:first-child, #filosofi > *:first-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* Portfolio end */
+  /* Contact */
+  .contact-pic {
+    display: -ms-grid;
+    display: grid;
+  }
+  .contact-pic img {
+    max-width: 100%;
+    padding-right: 30px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .adress {
+    display: inline-block;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 1.5em;
+  }
+  /* Contact END */
   /* Main END */
   /* Desktop Footer */
   .showdesktop {
@@ -404,4 +606,23 @@ footer a {
 }
 
 /* Media querry end */
+/* Cookie CSS */
+.cookie {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cookie-content {
+  padding: 15px;
+  background-color: #fefefe;
+  border: 1px solid #888;
+}
 /*# sourceMappingURL=style.css.map */
