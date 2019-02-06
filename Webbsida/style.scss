@@ -254,7 +254,7 @@ footer{
     }
    
     footer{
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 25px 25px 10px 25px;
         font-size: 1.3em;
@@ -286,29 +286,21 @@ footer{
         text-align: left;
         padding-left: 50px;
     }
-    .f-g-fb{
+    .f-g-fb, .f-g-ig, .f-g-li{
         grid-column: 4;
-        grid-row: 1;
         text-align: left;
-        position: relative;
-        left: 110px;
-        
+        /* padding-left: 50px; */
+        width: 150px;
+        justify-self: right;
+    }
+    .f-g-fb{
+        grid-row: 1;
     }
     .f-g-ig{
-        grid-column: 4;
         grid-row: 2;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     .f-g-li{
-        grid-column: 4;
         grid-row: 3;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     /* Desktop footer ends */
 
