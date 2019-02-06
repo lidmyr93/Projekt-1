@@ -92,6 +92,20 @@ header {
 /* main */
 main {
   margin-top: 6.45em;
+  /*  .textbox-konsult{
+        padding: 0% 2% 0% 2%;
+            h3{
+                margin-top: 0px;
+            }
+        img{
+            width: 200px;
+            height: 150px;
+        }
+        ol{
+            list-style-type: disc;
+            padding: 0% 2% 0% 2%;
+        }
+    }  */
 }
 
 main .sectionBlank {
@@ -157,6 +171,21 @@ main .textbox-text {
 
 main .textbox-text p {
   text-align: center;
+}
+
+main figure {
+  margin: 0% 2% 0% 2%;
+  padding: 0px;
+}
+
+main figure img {
+  width: 200px;
+  height: 150px;
+}
+
+main figure figcaption h3 {
+  margin-top: 1px;
+  padding-left: 10px;
 }
 
 /* main end *
