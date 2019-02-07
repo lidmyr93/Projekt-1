@@ -114,16 +114,24 @@ main{
     .sectionWhite{ background-color: #ffffff; }
     .sectionGrey{ background-color: #E6E6E6; }
     * > *  { grid-column: auto / span 6; }
-  // Section grid end
-  h1,h2,p,.textbox-picture-picture { 
-    padding: 30px 30px 0 30px;
-    margin: 0;
-  }
-  h1 { font-size: 1.7em; }
-  h2 { font-size: 1.5em; }
-  .textbox-picture-picture{
-    max-width: 100%;
-  }
+
+    // Section grid end
+    h1,h2,p,.textbox-picture-picture { 
+        padding: 30px 30px 0 30px;
+        margin: 0;
+    }
+    h1 { font-size: 1.7em; }
+    h2 { font-size: 1.5em; }
+    .textbox-picture-picture{
+        max-width: 100%;
+    }
+    ul {
+        padding: 30px 30px 0px 50px;
+        margin: 0;
+        li {
+            padding: 10px 0;
+        }
+
   /* Om oss Mobile/Generella start */
     figure{
         margin: 0;
@@ -142,6 +150,7 @@ main{
             p{padding-left: 0px; padding-top: 10px;}
 
         }
+
     }
     /* Om oss  Mobile/Generella ends */
 }
@@ -159,39 +168,39 @@ main{
     }       
     
     input[type=submit]{
-            width: 100%;
-            max-width: 100%;
-            padding: 10px 5px;
-            margin: 4px auto;
-            border: 0;
-            background-color: black; 
-            color: #FFF;
-            border-radius: 4px;
-            font-size: 15px;
-            outline: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 5px;
+        margin: 4px auto;
+        border: 0;
+        background-color: black; 
+        color: #FFF;
+        border-radius: 4px;
+        font-size: 15px;
+        outline: none;
         }
 
-          input[type=text], textarea{
-            font-size: 15px;
-            margin: 10px 0;
-            border: 0;
-            resize: none;
-            padding: 10px 5px;
-            background-color: #FFFFFF;
-            border-radius: 4px;
-            max-width: 100%;
-            width: 100%;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            outline: none;
+    input[type=text], textarea{
+        font-size: 15px;
+        margin: 10px 0;
+        border: 0;
+        resize: none;
+        padding: 10px 5px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        max-width: 100%;
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        outline: none;
         }
 
-        input[type=text]:focus, textarea:focus{
-            border: 2px solid #7a817f;
+    input[type=text]:focus, textarea:focus{
+        border: 2px solid #7a817f;
         }
 
     .contact-pic{
-     display: none;
+        display: none;
     }
 
     .adress{
@@ -209,12 +218,6 @@ main{
     * > h2,p { 
         margin: 0; 
         padding: 0 30px; }
-    * > ul {
-        padding: 0 20px 20px 50px;
-        li {
-            padding: 10px 0;
-        }
-    }
 }
 
 /* Image switcher */
@@ -403,7 +406,7 @@ footer{
     /* Contact */
 
     .contact-pic{
-        display: grid;
+        display: grid;  
         img{
             max-width: 100%;
             padding-right: 30px;

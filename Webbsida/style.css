@@ -163,6 +163,14 @@ main .textbox-picture-picture {
   max-width: 100%;
 }
 
+main ul {
+  padding: 30px 30px 0px 50px;
+  margin: 0;
+}
+
+main ul li {
+  padding: 10px 0;
+
 main figure {
   margin: 0;
   padding: 15px 30px 30px 30px;
@@ -251,14 +259,6 @@ input[type=text]:focus, textarea:focus {
 #kodexempel * > h2, #kodexempel p, #designexempel * > h2, #designexempel p {
   margin: 0;
   padding: 0 30px;
-}
-
-#kodexempel * > ul, #designexempel * > ul {
-  padding: 0 20px 20px 50px;
-}
-
-#kodexempel * > ul li, #designexempel * > ul li {
-  padding: 10px 0;
 }
 
 /* Image switcher */
