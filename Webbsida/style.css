@@ -170,8 +170,6 @@ main figure {
 
 main figure img {
   width: 200px;
-  height: 150px;
-  border: 1px solid black;
 }
 
 main figure figcaption h3 {
