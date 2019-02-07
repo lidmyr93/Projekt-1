@@ -188,8 +188,6 @@ main{
 
     /* Contact END */
 
-    }
-}
 
 /* Portfolio */
 #kodexempel,#designexempel {
@@ -476,6 +474,10 @@ footer{
 } /* Media querry end */
 
 /* Cookie CSS */
+#cookies { 
+    cursor: pointer; 
+    &:hover { zoom: 103%; }
+}
 .cookie {
     display: none;
     position: fixed;
@@ -503,15 +505,9 @@ footer{
   font-size: 40px;
   float: right;
   color: #000;
+  cursor: pointer;
 }
 .close:hover,{
   color: #000;
   text-decoration: none;
-  cursor: pointer;
 }
-
-
-
-    
-    
-    

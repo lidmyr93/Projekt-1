@@ -214,7 +214,6 @@ input[type=text]:focus, textarea:focus {
 }
 
 /* Contact END */
-
 /* Portfolio */
 #kodexempel, #designexempel {
   -webkit-box-align: start;
@@ -471,7 +470,13 @@ footer a {
   .sectionGrey .textbox-four, .sectionWhite .textbox-four {
     grid-column: auto / span 4;
   }
-
+  /* Portfolio */
+  #kodexempel > *:first-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* Portfolio end */
   /* Contact */
   .contact-pic {
     display: -ms-grid;
@@ -498,15 +503,6 @@ footer a {
     font-size: 1.5em;
   }
   /* Contact END */
-
-  /* Portfolio */
-  #kodexempel > *:first-child {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  /* Portfolio end */
-
   /* Main END */
   /* Desktop Footer */
   .showdesktop {
@@ -540,10 +536,6 @@ footer a {
     -ms-grid-row: 2;
     grid-row: 2;
     text-align: left;
-  }
-  .f-g-cookies:hover{
-    cursor: pointer;
-    zoom:103%;
   }
   .f-g-mail {
     -ms-grid-column: 2;
@@ -587,6 +579,14 @@ footer a {
 
 /* Media querry end */
 /* Cookie CSS */
+#cookies {
+  cursor: pointer;
+}
+
+#cookies:hover {
+  zoom: 103%;
+}
+
 .cookie {
   display: none;
   position: fixed;
@@ -603,22 +603,22 @@ footer a {
 .cookie-content {
   padding: 15px;
   position: absolute;
-  bottom:0;
-  left:20%;
+  bottom: 0;
+  left: 20%;
   width: 60%;
   background-color: #fefefe;
   border: 1px solid #888;
 }
 
-.close{
+.close {
   font-size: 40px;
   float: right;
   color: #000;
-}
-.close:hover,{
-  color: #000;
-  text-decoration: none;
   cursor: pointer;
 }
 
+.close:hover {
+  color: #000;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
