@@ -114,6 +114,7 @@ main{
     .sectionWhite{ background-color: #ffffff; }
     .sectionGrey{ background-color: #E6E6E6; }
     * > *  { grid-column: auto / span 6; }
+
     // Section grid end
     h1,h2,p,.textbox-picture-picture { 
         padding: 30px 30px 0 30px;
@@ -131,64 +132,77 @@ main{
             padding: 10px 0;
         }
     }
+    /* Om oss Mobile/Generella start */
+    figure{
+        margin: 0;
+        padding: 15px 30px 30px 30px;
+        img{
+            width: 200px;
+        }
+        figcaption{
+            h3{
+                margin-top: 1px;
+            }
+            ol{
+                padding-left: 15px;
+                margin: 5px 0px 5px 0px;
+            }
+            p{padding-left: 0px; padding-top: 10px;}
+
+        }
+    }
+    /* Om oss  Mobile/Generella ends */
 }
 
 /* Contact */
 
-    textarea{
-        height: 185px;
-    }
+textarea{
+    height: 185px;
+}
+iframe{
+    border: none;
+    height: 500px;
+    width: 100%;
+}       
 
-    iframe{
-        border: none;
-        height: 500px;
-        width: 100%;
-    }       
-    
-    input[type=submit]{
-            width: 100%;
-            max-width: 100%;
-            padding: 10px 5px;
-            margin: 4px auto;
-            border: 0;
-            background-color: black; 
-            color: #FFF;
-            border-radius: 4px;
-            font-size: 15px;
-            outline: none;
-        }
-
-          input[type=text], textarea{
-            font-size: 15px;
-            margin: 10px 0;
-            border: 0;
-            resize: none;
-            padding: 10px 5px;
-            background-color: #FFFFFF;
-            border-radius: 4px;
-            max-width: 100%;
-            width: 100%;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            outline: none;
-        }
-
-        input[type=text]:focus, textarea:focus{
-            border: 2px solid #7a817f;
-        }
-
-    .contact-pic{
-     display: none;
-    }
-
-    .adress{
-        display: inline-block;
-        padding-left: 30px;
-        font-size: 1.5em;
-    }
-
-    /* Contact END */
-
+input[type=submit]{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 5px;
+    margin: 4px auto;
+    border: 0;
+    background-color: black; 
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+input[type=text], textarea{
+    font-size: 15px;
+    margin: 10px 0;
+    border: 0;
+    resize: none;
+    padding: 10px 5px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    max-width: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+input[type=text]:focus, textarea:focus{
+    border: 2px solid #7a817f;
+}
+.contact-pic{
+    display: none;
+}
+.adress{
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 1.5em;
+}
+/* Contact END */
 
 /* Portfolio */
 #kodexempel,#designexempel {
@@ -271,12 +285,12 @@ main{
     display: none;
 }
     
-    hr{
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-       }
+hr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
 footer{
     margin-bottom: 10px;
     display: grid;
@@ -376,19 +390,20 @@ footer{
         .textbox-four { grid-column: auto / span 4; }
     }    
     
-    /* Portfolio */
+    /* Portfolio + omoss */
+    #kodexempel, #filosofi {
+        >*:first-child { order: 1; }
+    }
     #kodexempel {
         >*:first-child { 
-            order: 1; 
             padding-left: 30px;
         }
-    }
-    /* Portfolio end */
+    /* Portfolio + omoss end */
 
     /* Contact */
 
     .contact-pic{
-        display: grid;
+        display: grid;  
         img{
             max-width: 100%;
             padding-right: 30px;
@@ -469,31 +484,44 @@ footer{
     }
     /* Desktop footer ends */
 
-} /* Media querry end */
+    #cookies:hover { zoom: 103%; }
+}
+/* Media querry end */
 
 /* Cookie CSS */
-.cookie{
-    display: none; 
-    position: fixed; 
+#cookies { 
+    cursor: pointer; 
+}
+.cookie {
+    display: none;
+    position: fixed;
     z-index: 1;
+    padding-bottom: 5%;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.cookie-content{
-    padding: 15px;
-    background-color: #fefefe;
-    border: 1px solid #888;
+.cookie-content {
+  padding: 15px;
+  position: absolute;
+  bottom:0;
+  left:20%;
+  width: 60%;
+  background-color: #fefefe;
+  border: 1px solid #888;
 }
 
-
-
-
-    
-    
-    
+.close{
+  font-size: 40px;
+  float: right;
+  color: #000;
+  cursor: pointer;
+}
+.close:hover{
+  color: #000;
+  text-decoration: none;
+}

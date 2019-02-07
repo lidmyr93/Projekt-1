@@ -93,6 +93,8 @@ header {
 /* main */
 main {
   margin-top: 6.45em;
+  /* Om oss Mobile/Generella start */
+  /* Om oss  Mobile/Generella ends */
 }
 
 main .sectionBlank {
@@ -168,6 +170,30 @@ main ul {
 
 main ul li {
   padding: 10px 0;
+}
+
+main figure {
+  margin: 0;
+  padding: 15px 30px 30px 30px;
+}
+
+main figure img {
+  width: 200px;
+}
+
+main figure figcaption h3 {
+  margin-top: 1px;
+}
+
+main figure figcaption ol {
+  padding-left: 15px;
+  margin: 5px 0px 5px 0px;
+}
+
+main figure figcaption p {
+  padding-left: 0px;
+  padding-top: 10px;
+
 }
 
 /* Contact */
@@ -479,14 +505,17 @@ footer a {
   .sectionGrey .textbox-four, .sectionWhite .textbox-four {
     grid-column: auto / span 4;
   }
-  /* Portfolio */
-  #kodexempel > *:first-child {
+
+  /* Portfolio + omoss */
+  #kodexempel > *:first-child, #filosofi > *:first-child {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    padding-left: 30px;
   }
-  /* Portfolio end */
+  #kodexempel > *:first-child {
+    padding-left: 30px;
+  /* Portfolio + omoss end */
+    
   /* Contact */
   .contact-pic {
     display: -ms-grid;
@@ -514,6 +543,7 @@ footer a {
   }
   /* Contact END */
   /* Main END */
+    
   /* Desktop Footer */
   .showdesktop {
     display: block;
@@ -585,10 +615,17 @@ footer a {
     grid-row: 3;
   }
   /* Desktop footer ends */
+  #cookies:hover {
+    zoom: 103%;
+  }
 }
 
 /* Media querry end */
 /* Cookie CSS */
+#cookies {
+  cursor: pointer;
+}
+
 .cookie {
   display: none;
   position: fixed;
@@ -604,7 +641,24 @@ footer a {
 
 .cookie-content {
   padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
   background-color: #fefefe;
   border: 1px solid #888;
 }
+
+.close {
+  font-size: 40px;
+  float: right;
+  color: #000;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
