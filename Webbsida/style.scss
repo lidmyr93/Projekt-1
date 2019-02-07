@@ -109,27 +109,41 @@ main{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         color: #5E5555;
+        padding-bottom: 30px;
     }
     .sectionWhite{ background-color: #ffffff; }
     .sectionGrey{ background-color: #E6E6E6; }
     * > *  { grid-column: auto / span 6; }
-    // Section grid end
-    .textbox-title{
-        h2{
-            text-align: center;
+  // Section grid end
+  h1,h2,p,.textbox-picture-picture { 
+    padding: 30px 30px 0 30px;
+    margin: 0;
+  }
+  h1 { font-size: 1.7em; }
+  h2 { font-size: 1.5em; }
+  .textbox-picture-picture{
+    max-width: 100%;
+  }
+  /* Om oss Mobile/Generella start */
+    figure{
+        margin: 0;
+        padding: 15px 30px 30px 30px;
+        img{
+            width: 200px;
         }
-    }
-    .textbox-picture-picture{
-        max-width: 100%;
-        padding: 0px 30px 30px 30px;
-    }
-    .textbox-text{
-        padding: 0% 2% 0% 2%;
-        p{
-            text-align: center;
-        }
+        figcaption{
+            h3{
+                margin-top: 1px;
+            }
+            ol{
+                padding-left: 15px;
+                margin: 5px 0px 5px 0px;
+            }
+            p{padding-left: 0px; padding-top: 10px;}
 
+        }
     }
+    /* Om oss  Mobile/Generella ends */
 }
 
 /* Contact */
@@ -187,7 +201,6 @@ main{
     }
 
     /* Contact END */
-
 
 /* Portfolio */
 #kodexempel,#designexempel {
@@ -381,8 +394,8 @@ footer{
         .textbox-four { grid-column: auto / span 4; }
     }    
     
-    /* Portfolio */
-    #kodexempel {
+    /* Portfolio + omoss */
+    #kodexempel, #filosofi {
         >*:first-child { order: 1; }
     }
     /* Portfolio end */
