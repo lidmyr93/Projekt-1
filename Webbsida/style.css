@@ -496,6 +496,7 @@ footer a {
   .sectionGrey .textbox-four, .sectionWhite .textbox-four {
     grid-column: auto / span 4;
   }
+  
   /* Portfolio + omoss */
   #kodexempel > *:first-child, #filosofi > *:first-child {
     -webkit-box-ordinal-group: 2;
@@ -605,6 +606,14 @@ footer a {
 
 /* Media querry end */
 /* Cookie CSS */
+#cookies {
+  cursor: pointer;
+}
+
+#cookies:hover {
+  zoom: 103%;
+}
+
 .cookie {
   display: none;
   position: fixed;
@@ -620,7 +629,23 @@ footer a {
 
 .cookie-content {
   padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
   background-color: #fefefe;
   border: 1px solid #888;
+}
+
+.close {
+  font-size: 40px;
+  float: right;
+  color: #000;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
