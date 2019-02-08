@@ -10,7 +10,7 @@
     <title>Startsida</title>
 </head>
 
-<body>
+<body onload="myFunction()">
     <header>
         <a href="index.html"><img src="images/logo.svg" alt="logo" class="logo"></a>
         <!-- Navigation -->
@@ -77,17 +77,10 @@
     </header>
     <!-- main text and information div -->
     <main>
-        <div class="sectionBlank">
-            <!-- Blank texbox class -->
-            <div class="blank-spacer">&nbsp;</div>
-            <div class="blank-first-statement">
-                CODE hjälper dig på nätet
+        <div class="sectionBlank" id="sectionBlank">
+            <div id="blankAnimation" ></div>
+            <div id="finishedAnimation"> [<span>c o d e</span>]<br><p>CRITICAL OVERFLOW DATA ENTERPRISE</p>
             </div>
-            <div class="blank-spacer">&nbsp;</div>
-            <div class="blank-second-statement">
-                CODE can code
-            </div>
-            <div class="blank-spacer">&nbsp;</div>
         </div>
         <div class="sectionWhite">
             <div>
@@ -197,8 +190,10 @@
     
     </div>
     
+    
     <script src="script.js"></script>
     <script src="./cookie.js"></script>
+    <script src="./sectionBlank.js"></script>
 </body>
 
 </html>

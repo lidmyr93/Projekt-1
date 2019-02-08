@@ -26,7 +26,6 @@ header {
     align-items: center;
     width: 100%;
     top: 0;
-    z-index: 10;
 }
 
 .logo {
@@ -88,21 +87,28 @@ header {
 main{
     margin-top: 6.45em; // Margin för att inte header ska täcka innehållet
     .sectionBlank{
-        background-color: #000;
+        background-color: rgb(0, 0, 0);
         color: #eee;
-        height: 150px;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        .blank-spacer{
-            grid-column: 1 / 6;
+        height: 140px;
+        #finishedAnimation{
+            display: none;
+            padding-top: 1%;
+            font-size: 80px;
+            color: #000;
+            text-align: center;
+            
+            span{
+                color: lightblue;
+                font-size: 60px;
+            }
+            p{
+                font-size: 15px;
+            }
         }
-        .blank-first-statement{
-            grid-column: 2 / 4;
-
-        }       
-        .blank-second-statement{
-            grid-column: 3 / 5;
-        }
+        
+    }
+    #blankAnimation {
+        padding-left: 40px;
     }
     // Section grid
     .sectionGrey, .sectionWhite {
@@ -121,7 +127,7 @@ main{
     }
     .textbox-picture-picture{
         max-width: 100%;
-        padding: 0px 30px 30px 30px;
+        padding: 0% 5% 0% 5%;
     }
     .textbox-text{
         padding: 0% 2% 0% 2%;
@@ -131,146 +137,6 @@ main{
 
     }
 }
-
-/* Contact */
-
-    textarea{
-        height: 185px;
-    }
-
-    iframe{
-        border: none;
-        height: 500px;
-        width: 100%;
-    }       
-    
-    input[type=submit]{
-            width: 100%;
-            max-width: 100%;
-            padding: 10px 5px;
-            margin: 4px auto;
-            border: 0;
-            background-color: black; 
-            color: #FFF;
-            border-radius: 4px;
-            font-size: 15px;
-            outline: none;
-        }
-
-          input[type=text], textarea{
-            font-size: 15px;
-            margin: 10px 0;
-            border: 0;
-            resize: none;
-            padding: 10px 5px;
-            background-color: #FFFFFF;
-            border-radius: 4px;
-            max-width: 100%;
-            width: 100%;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            outline: none;
-        }
-
-        input[type=text]:focus, textarea:focus{
-            border: 2px solid #7a817f;
-        }
-
-    .contact-pic{
-     display: none;
-    }
-
-    .adress{
-        display: inline-block;
-        padding-left: 30px;
-        font-size: 1.5em;
-    }
-
-    /* Contact END */
-
-    }
-}
-
-/* Portfolio */
-#kodexempel,#designexempel {
-    align-items: start;
-    padding: 30px 30px;
-    * > h2,p { 
-        margin: 0; 
-        padding: 0 30px; }
-    * > ul {
-        padding: 0 20px 20px 50px;
-        li {
-            padding: 10px 0;
-        }
-    }
-}
-
-/* Image switcher */
-.switcher {
-    display: flex;
-    align-items: center;       
-    margin: 0 auto;
-    overflow: hidden;  
-    &, .switcher-imgs { 
-        max-width: 100%;
-        min-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
-    }
-    .switcher-imgs {
-        display: flex;
-        align-items: center;
-        .switcher-img {
-            margin: auto 0;
-            width: 0;
-            height: 100%;
-            transform: rotate(360deg);
-            opacity: 0;
-            transition: 1s ease-in-out;
-        }
-        .switcher-active { 
-            width: 100%; 
-            transform: rotate(0deg); 
-            opacity: 1;
-        }
-    }
-    
-    .switcher-left, .switcher-right {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        color: #fff;
-        background-color: #000;
-        font-size: 2em;
-        padding-bottom: 0.2em;
-        opacity: 0.75;
-        transition: 0.5s ease-in-out;
-        z-index: 1;
-    }
-    .switcher-left {
-        margin-left: -50px;
-        left: 0;
-        border-top-right-radius: 100%;
-        border-bottom-right-radius: 100%;
-    }
-    .switcher-right {
-        margin-right: -50px;
-        right: 0;
-        border-top-left-radius: 100%;
-        border-bottom-left-radius: 100%;
-    }
-    .switcher-active-left { left: 50px; }
-    .switcher-active-right { right: 50px; }
-}
-/* Image switcher end*/
-
-/* Portfolio - end */
-
 /* main end *
 
 /* Mobile Footer */
@@ -383,35 +249,7 @@ footer{
         .textbox-four { grid-column: auto / span 4; }
     }    
     
-    /* Portfolio */
-    #kodexempel {
-        >*:first-child { order: 1; }
-    }
-    /* Portfolio end */
 
-    /* Contact */
-
-    .contact-pic{
-        display: grid;
-        img{
-            max-width: 100%;
-            padding-right: 30px;
-            justify-self: center;
-            align-self: center;
-        }
-    }
-
-    .adress{
-        display: inline-block;
-        justify-self: center;
-        align-self: center;
-        padding-left: 30px;
-        padding-top: 40px;
-        font-size: 1.5em;
-    }
-
-    /* Contact END */
-    
     /* Main END */
 
     /* Desktop Footer */
@@ -423,7 +261,7 @@ footer{
     }
    
     footer{
-        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-columns: 1fr 3fr 3fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 25px 25px 10px 25px;
         font-size: 1.3em;
@@ -455,21 +293,29 @@ footer{
         text-align: left;
         padding-left: 50px;
     }
-    .f-g-fb, .f-g-ig, .f-g-li{
-        grid-column: 4;
-        text-align: left;
-        /* padding-left: 50px; */
-        width: 150px;
-        justify-self: right;
-    }
     .f-g-fb{
+        grid-column: 4;
         grid-row: 1;
+        text-align: left;
+        position: relative;
+        left: 110px;
+        
     }
     .f-g-ig{
+        grid-column: 4;
         grid-row: 2;
+        text-align: left;
+        position: relative;
+        left: 110px;
+        
     }
     .f-g-li{
+        grid-column: 4;
         grid-row: 3;
+        text-align: left;
+        position: relative;
+        left: 110px;
+        
     }
     /* Desktop footer ends */
 
