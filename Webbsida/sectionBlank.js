@@ -35,7 +35,7 @@ function myFunction() {
     let finished = document.getElementById("finishedAnimation") ;
     let time = 0;
     let time2 = 0;
-    let update = setInterval(frame, 150)
+    let update = setInterval(frame, 100)
     function frame() {
         
         if (time == 27){
