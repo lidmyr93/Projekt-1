@@ -26,6 +26,7 @@ header {
     align-items: center;
     width: 100%;
     top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -130,7 +131,6 @@ main{
     h2 { font-size: 1.5em; }
     .textbox-picture-picture{
         max-width: 100%;
-
     }
     ul {
         padding: 30px 30px 0 50px;
@@ -138,7 +138,6 @@ main{
         li {
             padding: 10px 0;
         }
-
     }
     /* Om oss Mobile/Generella start */
     figure{
@@ -286,7 +285,6 @@ input[type=text]:focus, textarea:focus{
 
 /* Portfolio - end */
 
-
 /* main end *
 
 /* Mobile Footer */
@@ -398,7 +396,7 @@ footer{
         .textbox-three { grid-column: auto / span 3; }
         .textbox-four { grid-column: auto / span 4; }
     }    
-
+    
     /* Portfolio + omoss */
     #kodexempel, #filosofi {
         >*:first-child { order: 1; }
@@ -422,7 +420,17 @@ footer{
         }
     }
 
+    .adress{
+        display: inline-block;
+        justify-self: center;
+        align-self: center;
+        padding-left: 30px;
+        padding-top: 40px;
+        font-size: 1.5em;
+    }
 
+    /* Contact END */
+    
     /* Main END */
 
     /* Desktop Footer */
@@ -434,7 +442,7 @@ footer{
     }
    
     footer{
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 25px 25px 10px 25px;
         font-size: 1.3em;
@@ -466,29 +474,21 @@ footer{
         text-align: left;
         padding-left: 50px;
     }
-    .f-g-fb{
+    .f-g-fb, .f-g-ig, .f-g-li{
         grid-column: 4;
-        grid-row: 1;
         text-align: left;
-        position: relative;
-        left: 110px;
-        
+        /* padding-left: 50px; */
+        width: 150px;
+        justify-self: right;
+    }
+    .f-g-fb{
+        grid-row: 1;
     }
     .f-g-ig{
-        grid-column: 4;
         grid-row: 2;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     .f-g-li{
-        grid-column: 4;
         grid-row: 3;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     /* Desktop footer ends */
 
