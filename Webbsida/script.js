@@ -14,10 +14,19 @@ function toggleMenu() {
 }
 /* Hamburgarmeny end */
 
-// Scrolla tillbaka när man går till en "hash anchor" så att header inte döljer rubriken.
-window.addEventListener('hashchange', scrollUp);
+/* Scrolla tillbaka när man går till en "hash anchor" så att header inte döljer rubriken. */
 window.addEventListener('load', scrollUp);
-function scrollUp() { scrollBy(0, -100); }
+window.addEventListener('DOMContentLoaded', scrollUp);
+menylinks.forEach(link => link.addEventListener('mouseup', () => setTimeout(scrollUp, 1)));
+const header = document.querySelector('header');
+// Funktionen kontrollerar headers höjd, och sektionens startposition och scrollar sedan tillbaka sidan så att header inte döljer sektionen
+function scrollUp() { 
+    const scrollBack = header.offsetHeight;   
+    const id = (window.location.hash) ? document.querySelector(window.location.hash) : document.querySelector('main :first-child');
+    const idPos = id.getBoundingClientRect().top;
+    scrollBy(0, idPos-scrollBack);
+}
+/* Scrollback end */
 
 /* Bildbytare */
 const switchers = document.querySelectorAll('.switcher');
