@@ -51,15 +51,4 @@ function showArrows() {
     this.children[0].classList.toggle('switcher-active-left');
     this.children[2].classList.toggle('switcher-active-right');
 }
-
-// återställ switcharnas höjd vid storleksändring av fönster
-let resizeEnd;
-window.addEventListener('resize', () => {
-    switchers.forEach(switcher => switcher.style.height = '100%');
-    clearTimeout(resizeEnd);
-    resizeEnd = setTimeout(resetHeight, 250);
-    function resetHeight() {
-        switchers.forEach(switcher => switcher.removeAttribute('style'));
-    }
-});
 /* Bildbytare end */

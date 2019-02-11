@@ -229,22 +229,21 @@ input[type=text]:focus, textarea:focus{
     &, .switcher-imgs { 
         max-width: 100%;
         min-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
     }
     .switcher-imgs {
         display: flex;
         align-items: center;
         .switcher-img {
-            margin: auto 0;
+            margin: 0;
             width: 0;
-            height: 100%;
             transform: rotate(360deg);
             opacity: 0;
-            transition: 1s ease-in-out;
+            transition: 0.75s ease-in-out;
         }
         .switcher-active { 
-            width: 100%; 
+            width: min-content;
+            min-width: 100%;
+            max-width: 100%;
             transform: rotate(0deg); 
             opacity: 1;
         }
