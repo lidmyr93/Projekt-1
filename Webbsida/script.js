@@ -4,6 +4,8 @@ const menyknapp = document.querySelector('.hamburger');
 const menylinks = document.querySelectorAll('.menu-under a');
 
 menyknapp.addEventListener('click', toggleMenu);
+nav.addEventListener('transitionend',() => { if (nav.classList.contains('show-nav')) nav.style.overflowY = 'auto' }); // Lägger till scroll på menyn om det behövs
+menyknapp.addEventListener('click',() => nav.style.removeProperty('overflow-y')); // Tar bort scroll vid klick på burgare
 menylinks.forEach(link => link.addEventListener('click', toggleMenu));
 
 function toggleMenu() {
