@@ -114,7 +114,7 @@ main{
     // Section grid
     .sectionGrey, .sectionWhite {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         color: #5E5555;
         padding-bottom: 30px;
     }
@@ -406,7 +406,17 @@ footer{
         }
     }
     /* Portfolio + omoss end */
-
+    /* omoss */
+        img, figcaption{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        figcaption{
+            margin-left: 30px;
+            line-height: 1.5em;
+            min-width: 200px;
+        }
+        /* om oss ends */
     /* Contact */
 
     .contact-pic{
