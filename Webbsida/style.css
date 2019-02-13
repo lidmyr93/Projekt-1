@@ -100,6 +100,7 @@ main .sectionBlank {
   background-color: black;
   color: #eee;
   height: 140px;
+  max-height: 140px;
 }
 
 main .sectionBlank #finishedAnimation {
@@ -108,6 +109,7 @@ main .sectionBlank #finishedAnimation {
   font-size: 80px;
   color: #000;
   text-align: center;
+  max-height: 140px;
 }
 
 main .sectionBlank #finishedAnimation span {
@@ -120,7 +122,7 @@ main .sectionBlank #finishedAnimation p {
 }
 
 main #blankAnimation {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 main .sectionGrey, main .sectionWhite {
@@ -159,7 +161,6 @@ main h2 {
 
 main .textbox-picture-picture {
   max-width: 100%;
-
 }
 
 main ul {
@@ -193,7 +194,6 @@ main figure figcaption p {
   padding-left: 0px;
   padding-top: 10px;
 }
-
 
 /* Contact */
 textarea {
@@ -363,7 +363,6 @@ input[type=text]:focus, textarea:focus {
 
 /* Image switcher end*/
 /* Portfolio - end */
-
 /* main end *
 
 /* Mobile Footer */
@@ -529,19 +528,6 @@ footer a {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .adress {
-    display: inline-block;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-left: 30px;
-    padding-top: 40px;
-    font-size: 1.5em;
-  }
-  /* Contact END */
-
   /* Main END */
   /* Desktop Footer */
   .showdesktop {
@@ -635,18 +621,17 @@ footer a {
   display: none;
   position: fixed;
   z-index: 1;
+  padding-bottom: 5%;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .cookie-content {
   padding: 15px;
-
   position: absolute;
   bottom: 0;
   left: 20%;
@@ -667,4 +652,8 @@ footer a {
   text-decoration: none;
 }
 
+/* SVG File styling */
+.st0 {
+  fill: #55AAFF;
+}
 /*# sourceMappingURL=style.css.map */

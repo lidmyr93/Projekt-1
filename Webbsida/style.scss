@@ -90,12 +90,14 @@ main{
         background-color: rgb(0, 0, 0);
         color: #eee;
         height: 140px;
+        max-height: 140px;
         #finishedAnimation{
             display: none;
             padding-top: 1%;
             font-size: 80px;
             color: #000;
             text-align: center;
+            max-height: 140px;
             
             span{
                 color: lightblue;
@@ -108,7 +110,7 @@ main{
         
     }
     #blankAnimation {
-        padding-left: 40px;
+        padding-left: 30px;
     }
     // Section grid
     .sectionGrey, .sectionWhite {
@@ -533,3 +535,8 @@ footer{
   color: #000;
   text-decoration: none;
 }
+
+
+/* SVG File styling */
+.st0{fill:#55AAFF;}
+

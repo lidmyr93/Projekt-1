@@ -39,8 +39,9 @@ function myFunction() {
     function frame() {
         
         if (time == 27){
+            blankAnimation.style.paddingLeft = 0;
             blankAnimation.innerHTML = "WELCOME!";  
-            blankAnimation.style.fontSize = 90 + "px";
+            blankAnimation.style.fontSize = 65 + "px";
             blankAnimation.style.textAlign = "center";
             blankAnimation.style.paddingTop = 15 + "px";
             
