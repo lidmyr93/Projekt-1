@@ -645,7 +645,7 @@ footer a {
 }
 
 /* SVG File styling */
-.path1, .path2, .path3 {
+.path1, .path2, .path3, .path4 {
   -webkit-animation-name: dash, fillin;
           animation-name: dash, fillin;
   -webkit-animation-delay: 0s, 1.7s;
