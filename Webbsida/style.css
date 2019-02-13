@@ -110,6 +110,7 @@ main .sectionBlank {
   margin-bottom: 30px;
   color: #eee;
   height: 140px;
+  max-height: 140px;
 }
 
 main .sectionBlank #finishedAnimation {
@@ -118,6 +119,7 @@ main .sectionBlank #finishedAnimation {
   font-size: 80px;
   color: #000;
   text-align: center;
+  max-height: 140px;
 }
 
 main .sectionBlank #finishedAnimation span {
@@ -130,7 +132,7 @@ main .sectionBlank #finishedAnimation p {
 }
 
 main #blankAnimation {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 main .sectionGrey, main .sectionWhite {

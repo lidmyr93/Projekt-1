@@ -35,12 +35,13 @@ function myFunction() {
     let finished = document.getElementById("finishedAnimation") ;
     let time = 0;
     let time2 = 0;
-    let update = setInterval(frame, 150)
+    let update = setInterval(frame, 100)
     function frame() {
         
         if (time == 27){
+            blankAnimation.style.paddingLeft = 0;
             blankAnimation.innerHTML = "WELCOME!";  
-            blankAnimation.style.fontSize = 90 + "px";
+            blankAnimation.style.fontSize = 65 + "px";
             blankAnimation.style.textAlign = "center";
             blankAnimation.style.paddingTop = 15 + "px";
             
