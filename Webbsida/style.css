@@ -9,6 +9,14 @@ body {
   margin: 0;
 }
 
+a:link, a:visited {
+  color: #2c5b80;
+}
+
+a:hover {
+  color: #42a4ff;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -25,6 +33,7 @@ header {
           align-items: center;
   width: 100%;
   top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -46,7 +55,7 @@ header {
   nav {
     width: 100%;
     max-height: 0;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0 30px 0 10px;
     margin: 0;
     top: 6.45em;
@@ -55,6 +64,8 @@ header {
     bottom: 0;
     position: fixed;
     background-color: #bbddff;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
   nav a {
     color: #000;
@@ -81,8 +92,6 @@ header {
     padding-bottom: 10px;
   }
   .show-nav {
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
     max-height: 100%;
   }
 }
@@ -98,6 +107,7 @@ main {
 
 main .sectionBlank {
   background-color: black;
+  margin-bottom: 30px;
   color: #eee;
   height: 140px;
   max-height: 140px;
@@ -128,8 +138,8 @@ main #blankAnimation {
 main .sectionGrey, main .sectionWhite {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   color: #5E5555;
   padding-bottom: 30px;
 }
@@ -161,6 +171,7 @@ main h2 {
 
 main .textbox-picture-picture {
   max-width: 100%;
+  min-width: 100%;
 }
 
 main ul {
@@ -284,8 +295,6 @@ input[type=text]:focus, textarea:focus {
 .switcher, .switcher .switcher-imgs {
   max-width: 100%;
   min-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
 }
 
 .switcher .switcher-imgs {
@@ -298,18 +307,21 @@ input[type=text]:focus, textarea:focus {
 }
 
 .switcher .switcher-imgs .switcher-img {
-  margin: auto 0;
+  margin: 0;
   width: 0;
-  height: 100%;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   opacity: 0;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
 }
 
 .switcher .switcher-imgs .switcher-active {
-  width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 100%;
+  max-width: 100%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1;
@@ -514,20 +526,39 @@ footer a {
     padding-left: 30px;
   }
   /* Portfolio + omoss end */
+  /* omoss */
+  img, figcaption {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  figcaption {
+    margin-left: 30px;
+    line-height: 1.5em;
+    min-width: 200px;
+  }
+  /* om oss ends */
   /* Contact */
   .contact-pic {
-    display: -ms-grid;
-    display: grid;
+    display: block;
+    text-align: center;
   }
   .contact-pic img {
     max-width: 100%;
+    max-height: 100%;
     padding-right: 30px;
+  }
+  .adress {
+    display: inline-block;
     -ms-grid-column-align: center;
         justify-self: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 1.5em;
   }
+  /* Contact END */
   /* Main END */
   /* Desktop Footer */
   .showdesktop {
@@ -537,8 +568,8 @@ footer a {
     display: none;
   }
   footer {
-    -ms-grid-columns: 1fr 3fr 3fr 1fr;
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+    -ms-grid-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     margin: 25px 25px 10px 25px;
@@ -578,32 +609,26 @@ footer a {
     text-align: left;
     padding-left: 50px;
   }
-  .f-g-fb {
+  .f-g-fb, .f-g-ig, .f-g-li {
     -ms-grid-column: 4;
     grid-column: 4;
+    text-align: left;
+    /* padding-left: 50px; */
+    width: 150px;
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .f-g-fb {
     -ms-grid-row: 1;
     grid-row: 1;
-    text-align: left;
-    position: relative;
-    left: 110px;
   }
   .f-g-ig {
-    -ms-grid-column: 4;
-    grid-column: 4;
     -ms-grid-row: 2;
     grid-row: 2;
-    text-align: left;
-    position: relative;
-    left: 110px;
   }
   .f-g-li {
-    -ms-grid-column: 4;
-    grid-column: 4;
     -ms-grid-row: 3;
     grid-row: 3;
-    text-align: left;
-    position: relative;
-    left: 110px;
   }
   /* Desktop footer ends */
   #cookies:hover {
@@ -650,10 +675,5 @@ footer a {
 .close:hover {
   color: #000;
   text-decoration: none;
-}
-
-/* SVG File styling */
-.st0 {
-  fill: #55AAFF;
 }
 /*# sourceMappingURL=style.css.map */

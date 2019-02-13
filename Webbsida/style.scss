@@ -16,6 +16,14 @@ body {
     margin: 0;
 }
 
+a:link, a:visited{
+    color: #2c5b80;
+}
+
+a:hover{
+    color: #42a4ff;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -26,6 +34,7 @@ header {
     align-items: center;
     width: 100%;
     top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -47,7 +56,7 @@ header {
     nav {
         width: 100%;
         max-height: 0;
-        overflow: scroll;
+        overflow: hidden;
         padding: 0 30px 0 10px;
         margin: 0;
         top: 6.45em;
@@ -56,6 +65,7 @@ header {
         bottom: 0;
         position: fixed;
         background-color: $menu-bg; 
+        transition: 0.5s ease-in-out;
         a {
             color: $menu-text;
             font-size: 1.2em;
@@ -76,7 +86,6 @@ header {
         li>a { padding-bottom: 10px; }
     }
     .show-nav { 
-        transition: 0.5s ease-in-out;
         max-height: 100%;
     }
 }
@@ -88,6 +97,7 @@ main{
     margin-top: 6.45em; // Margin för att inte header ska täcka innehållet
     .sectionBlank{
         background-color: rgb(0, 0, 0);
+        margin-bottom: 30px;
         color: #eee;
         height: 140px;
         max-height: 140px;
@@ -115,7 +125,7 @@ main{
     // Section grid
     .sectionGrey, .sectionWhite {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         color: #5E5555;
         padding-bottom: 30px;
     }
@@ -132,7 +142,7 @@ main{
     h2 { font-size: 1.5em; }
     .textbox-picture-picture{
         max-width: 100%;
-
+        min-width: 100%;
     }
     ul {
         padding: 30px 30px 0 50px;
@@ -140,7 +150,6 @@ main{
         li {
             padding: 10px 0;
         }
-
     }
     /* Om oss Mobile/Generella start */
     figure{
@@ -232,22 +241,21 @@ input[type=text]:focus, textarea:focus{
     &, .switcher-imgs { 
         max-width: 100%;
         min-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
     }
     .switcher-imgs {
         display: flex;
         align-items: center;
         .switcher-img {
-            margin: auto 0;
+            margin: 0;
             width: 0;
-            height: 100%;
             transform: rotate(360deg);
             opacity: 0;
-            transition: 1s ease-in-out;
+            transition: 0.75s ease-in-out;
         }
         .switcher-active { 
-            width: 100%; 
+            width: min-content;
+            min-width: 100%;
+            max-width: 100%;
             transform: rotate(0deg); 
             opacity: 1;
         }
@@ -287,7 +295,6 @@ input[type=text]:focus, textarea:focus{
 /* Image switcher end*/
 
 /* Portfolio - end */
-
 
 /* main end *
 
@@ -400,7 +407,7 @@ footer{
         .textbox-three { grid-column: auto / span 3; }
         .textbox-four { grid-column: auto / span 4; }
     }    
-
+    
     /* Portfolio + omoss */
     #kodexempel, #filosofi {
         >*:first-child { order: 1; }
@@ -411,20 +418,40 @@ footer{
         }
     }
     /* Portfolio + omoss end */
-
+    /* omoss */
+        img, figcaption{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        figcaption{
+            margin-left: 30px;
+            line-height: 1.5em;
+            min-width: 200px;
+        }
+        /* om oss ends */
     /* Contact */
 
     .contact-pic{
-        display: grid;  
+        display: block;
+        text-align: center;
         img{
             max-width: 100%;
+            max-height: 100%;
             padding-right: 30px;
-            justify-self: center;
-            align-self: center;
         }
     }
 
+    .adress{
+        display: inline-block;
+        justify-self: center;
+        align-self: center;
+        padding-left: 30px;
+        padding-top: 40px;
+        font-size: 1.5em;
+    }
 
+    /* Contact END */
+    
     /* Main END */
 
     /* Desktop Footer */
@@ -436,7 +463,7 @@ footer{
     }
    
     footer{
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 25px 25px 10px 25px;
         font-size: 1.3em;
@@ -468,29 +495,21 @@ footer{
         text-align: left;
         padding-left: 50px;
     }
-    .f-g-fb{
+    .f-g-fb, .f-g-ig, .f-g-li{
         grid-column: 4;
-        grid-row: 1;
         text-align: left;
-        position: relative;
-        left: 110px;
-        
+        /* padding-left: 50px; */
+        width: 150px;
+        justify-self: right;
+    }
+    .f-g-fb{
+        grid-row: 1;
     }
     .f-g-ig{
-        grid-column: 4;
         grid-row: 2;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     .f-g-li{
-        grid-column: 4;
         grid-row: 3;
-        text-align: left;
-        position: relative;
-        left: 110px;
-        
     }
     /* Desktop footer ends */
 
