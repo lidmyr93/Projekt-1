@@ -4,6 +4,8 @@ const menyknapp = document.querySelector('.hamburger');
 const menylinks = document.querySelectorAll('.menu-under a');
 
 menyknapp.addEventListener('click', toggleMenu);
+nav.addEventListener('transitionend',() => { if (nav.classList.contains('show-nav')) nav.style.overflowY = 'auto' }); // Lägger till scroll på menyn om det behövs
+menyknapp.addEventListener('click',() => nav.style.removeProperty('overflow-y')); // Tar bort scroll vid klick på burgare
 menylinks.forEach(link => link.addEventListener('click', toggleMenu));
 
 function toggleMenu() {
@@ -12,10 +14,19 @@ function toggleMenu() {
 }
 /* Hamburgarmeny end */
 
-// Scrolla tillbaka när man går till en "hash anchor" så att header inte döljer rubriken.
-window.addEventListener('hashchange', scrollUp);
+/* Scrolla tillbaka när man går till en "hash anchor" så att header inte döljer rubriken. */
 window.addEventListener('load', scrollUp);
-function scrollUp() { scrollBy(0, -100); }
+window.addEventListener('DOMContentLoaded', scrollUp);
+menylinks.forEach(link => link.addEventListener('mouseup', () => setTimeout(scrollUp, 1)));
+const header = document.querySelector('header');
+// Funktionen kontrollerar headers höjd, och sektionens startposition och scrollar sedan tillbaka sidan så att header inte döljer sektionen
+function scrollUp() { 
+    const scrollBack = header.offsetHeight;   
+    const id = (window.location.hash) ? document.querySelector(window.location.hash) : document.querySelector('main :first-child');
+    const idPos = id.getBoundingClientRect().top;
+    scrollBy(0, idPos-scrollBack);
+}
+/* Scrollback end */
 
 /* Bildbytare */
 const switchers = document.querySelectorAll('.switcher');
@@ -51,15 +62,4 @@ function showArrows() {
     this.children[0].classList.toggle('switcher-active-left');
     this.children[2].classList.toggle('switcher-active-right');
 }
-
-// återställ switcharnas höjd vid storleksändring av fönster
-let resizeEnd;
-window.addEventListener('resize', () => {
-    switchers.forEach(switcher => switcher.style.height = '100%');
-    clearTimeout(resizeEnd);
-    resizeEnd = setTimeout(resetHeight, 250);
-    function resetHeight() {
-        switchers.forEach(switcher => switcher.removeAttribute('style'));
-    }
-});
 /* Bildbytare end */
