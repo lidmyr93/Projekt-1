@@ -16,6 +16,14 @@ body {
     margin: 0;
 }
 
+a:link, a:visited{
+    color: #2c5b80;
+}
+
+a:hover{
+    color: #42a4ff;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -89,6 +97,7 @@ main{
     margin-top: 6.45em; // Margin för att inte header ska täcka innehållet
     .sectionBlank{
         background-color: rgb(0, 0, 0);
+        margin-bottom: 30px;
         color: #eee;
         height: 140px;
         #finishedAnimation{
@@ -131,6 +140,7 @@ main{
     h2 { font-size: 1.5em; }
     .textbox-picture-picture{
         max-width: 100%;
+        min-width: 100%;
     }
     ul {
         padding: 30px 30px 0 50px;
@@ -420,12 +430,12 @@ footer{
     /* Contact */
 
     .contact-pic{
-        display: grid;  
+        display: block;
+        text-align: center;
         img{
             max-width: 100%;
+            max-height: 100%;
             padding-right: 30px;
-            justify-self: center;
-            align-self: center;
         }
     }
 
