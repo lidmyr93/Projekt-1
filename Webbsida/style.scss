@@ -87,25 +87,54 @@ main{
         margin-bottom: 30px;
         color: #eee;
         height: 140px;
+
         max-height: 140px;
         #finishedAnimation{
+            display: flex;
+            padding: 20px;
             display: none;
-            padding-top: 1%;
-            font-size: 80px;
-            color: #000;
-            text-align: center;
-            max-height: 140px;          
-            span{
-                color: lightblue;
-                font-size: 60px;
-            }
-            p{
-                font-size: 15px;
-            }
-        }      
+            width: 20em;
+            margin: auto;   
+        }
     }
     #blankAnimation {
         padding-left: 30px;
+    }
+    /* SVG File styling */
+    .path1,.path2,.path3,.path4{
+        animation-name: dash, fillin;
+        animation-delay: 0s, 1.7s;
+        animation-duration: 4s, 1s;
+        animation-fill-mode: forwards;
+        fill-opacity: 0;
+        stroke-miterlimit: 10;
+    }
+    .path1,.path3{
+        fill: #000000;
+        stroke:#000000;
+    }
+    .path2,.path3{
+        stroke-width: 3;
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
+    }
+    .path1 {
+        stroke-width: 1;
+        stroke-dasharray: 150;
+        stroke-dashoffset: 150;
+    }
+    .path2{
+        fill: #55AAFF;
+        stroke:#55AAFF;
+    }
+    @keyframes dash {
+        to {
+        stroke-dashoffset: 0;
+        }
+    }
+    @keyframes fillin{
+        from { fill-opacity: 0; }
+        to { fill-opacity: 1; }
     }
     // Section grid
     .sectionGrey, .sectionWhite {
