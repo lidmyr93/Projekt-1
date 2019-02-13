@@ -9,6 +9,14 @@ body {
   margin: 0;
 }
 
+a:link, a:visited {
+  color: #2c5b80;
+}
+
+a:hover {
+  color: #42a4ff;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -99,6 +107,7 @@ main {
 
 main .sectionBlank {
   background-color: black;
+  margin-bottom: 30px;
   color: #eee;
   height: 140px;
 }
@@ -160,6 +169,7 @@ main h2 {
 
 main .textbox-picture-picture {
   max-width: 100%;
+  min-width: 100%;
 }
 
 main ul {
@@ -516,17 +526,13 @@ footer a {
   /* Portfolio + omoss end */
   /* Contact */
   .contact-pic {
-    display: -ms-grid;
-    display: grid;
+    display: block;
+    text-align: center;
   }
   .contact-pic img {
     max-width: 100%;
+    max-height: 100%;
     padding-right: 30px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .adress {
     display: inline-block;
