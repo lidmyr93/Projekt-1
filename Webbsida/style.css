@@ -127,8 +127,8 @@ main #blankAnimation {
 main .sectionGrey, main .sectionWhite {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   color: #5E5555;
   padding-bottom: 30px;
 }

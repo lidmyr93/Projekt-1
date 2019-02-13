@@ -114,7 +114,7 @@ main{
     // Section grid
     .sectionGrey, .sectionWhite {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         color: #5E5555;
         padding-bottom: 30px;
     }
