@@ -514,6 +514,17 @@ footer a {
     padding-left: 30px;
   }
   /* Portfolio + omoss end */
+  /* omoss */
+  img, figcaption {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  figcaption {
+    margin-left: 30px;
+    line-height: 1.5em;
+    min-width: 200px;
+  }
+  /* om oss ends */
   /* Contact */
   .contact-pic {
     display: -ms-grid;
